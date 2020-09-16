@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan - Calculator</title>
+
+    <link rel="stylesheet" href="./css/loan-calculator.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="d-flex justify-content-center">
+
+            <div class="jbtrn rounded pl-sm-5 pr-sm-5">
+                <h1 class="display-3 text-center">Loan Calculator</h1>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-center">  
+
+
+                <form action="" method="POST" class="col-md-8 col-sm-12">
+
+                    <div class="mt-3">
+                        <div class="">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">$</div>
+                                </div>
+                                <input type="text" class="form-control" id="amount" placeholder="Loan Amount" value="">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="mt-3">
+                        <div class="">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">%</div>
+                                </div>
+                                <input type="text" class="form-control" id="interest" placeholder="Interest">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-3">
+                        <div class="form-group ">
+                            <input type="text" class="form-control" id="time" placeholder="Time Period">
+                        </div>
+                    </div>
+
+                    <div class="offset-5">
+                        <button type="submit" class="btn btn-primary btn-lg">Calculate</button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+
+        <div class="d-flex justify-content-center mt-md-3">
+
+            <div class="jbtrn rounded pl-md-5 pr-md-5">
+                <h1 class="display-3 text-center">Results</h1>
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-md-12 mt-3 d-flex justify-content-center">
+                <div class="col-md-8">
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">Monthly Payment</div>
+                        </div>
+                        <input type="text" class="form-control" id="monthlyPayment" placeholder="">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-12 mt-2  d-flex justify-content-center">
+                <div class="col-md-8">
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">Total Payment</div>
+                        </div>
+                        <input type="text" class="form-control" id="totalPayment" placeholder="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 mt-2  d-flex justify-content-center">
+                <div class="col-md-8">
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">Interest Paid</div>
+                        </div>
+                        <input type="text" class="form-control" id="interestPaid" placeholder="">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+    <script src="./js/loan-calculator.js"></script>
+</body>
+
+</html>

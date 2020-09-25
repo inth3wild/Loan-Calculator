@@ -1,24 +1,41 @@
-console.log("Working...")
+// Get input variables
+const amount = document.getElementById("amount");
+const interest = document.getElementById("interest");
+const timePeriod = document.getElementById("time");
 
-// P = i*A/1-(1+i)^-N
+// Get display variables
+const monthlyPayment = document.getElementById("monthlyPayment");
+const totalPayment = document.getElementById("totalPayment");
+const interestPaid = document.getElementById("interestPaid");
+const spinner = document.getElementById("loading");
 
 function calculateResults(e) {
-    // var P = 30;
-    // var i = 10;
-    // var A = 20;
-    // var N = 5;
+  let totalAmount, totalInterest;
 
-    // console.log(P,i,A,N)
+  const principal = parseFloat(amount.value);
+  // make sure that we are getting integer values with parseFloat()
+  const i = parseFloat(interest.value) / 100 / 12;
+  // interest per month
+  const n = parseFloat(timePeriod.value) * 12;
+  // number of months
+  const monthly = (i * principal) / (1 - Math.pow(1 + i, -n));
 
-    var i = document.getElementById("interest").value;
-    var A = document.getElementById("amount").value;
-    var N = document.getElementById("time").value;
-
-    var ans = (i * A) / 1 - Math.pow( (1+i), -N);
-
-    console.log(ans)
-
-    // e.preventDefault();
+  if (isFinite(monthly)) {
+    totalAmount = monthly * n;
+    totalInterest = totalAmount - principal;
+    displayResults(monthly, totalAmount, totalInterest);
+  } else {
+    alert("Please check the values entered");
+  }
 }
 
-calculateResults()
+const displayResults = (monthly, total, interest) => {
+  monthlyPayment.value = monthly.toFixed(2);
+  totalPayment.value = total.toFixed(2);
+  interestPaid.value = interest.toFixed(2);
+};
+
+document.getElementById("calc").addEventListener("click", function (e) {
+  e.preventDefault();
+  calculateResults();
+});

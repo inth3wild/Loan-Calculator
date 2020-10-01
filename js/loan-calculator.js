@@ -1,9 +1,7 @@
-// Get input variables
 const amount = document.getElementById("amount");
 const interest = document.getElementById("interest");
 const timePeriod = document.getElementById("time");
 
-// Get display variables
 const monthlyPayment = document.getElementById("monthlyPayment");
 const totalPayment = document.getElementById("totalPayment");
 const interestPaid = document.getElementById("interestPaid");
@@ -13,11 +11,11 @@ function calculateResults(e) {
   let totalAmount, totalInterest;
 
   const principal = parseFloat(amount.value);
-  // make sure that we are getting integer values with parseFloat()
+
   const i = parseFloat(interest.value) / 100 / 12;
-  // interest per month
+
   const n = parseFloat(timePeriod.value) * 12;
-  // number of months
+
   const monthly = (i * principal) / (1 - Math.pow(1 + i, -n));
 
   if (isFinite(monthly)) {

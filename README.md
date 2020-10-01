@@ -4,7 +4,7 @@ This calculate your loan and it uses principal interest formular.
 
 ## Technologies
 
-An application built with HTML and Javascript.
+An application built with HTML, CSS, Bootstrap and Javascript.
 
 ## Getting Started
 
